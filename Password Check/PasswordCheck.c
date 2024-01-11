@@ -1,12 +1,16 @@
 #include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+#include <ctype.h>
 
-int PasswordCheck();
+bool PasswordCheck(char *p);
 
 int main()
 {
-	// variable userPassword created to store the user password.
-
-	int userPassword;
+	char userPassword[] = "ABCD!12ght";
+	bool result = PasswordCheck(userPassword);
+	if (result) printf("Verified");
+	else printf("Invalid");
 
 	// prompting the user with some info about the program and asking about to insert a password of their choice.
 
@@ -16,15 +20,32 @@ int main()
 
 	// assigning the user password into the variable userPassword.
 
-	scanf_s("%i", &userPassword);
 
-	// 
-	int finalAnswer = PasswordCheck(userPassword);
+	return 0;
 }
 
-int PasswordCheck(int userAnswer)
+bool PasswordCheck(char *userPassword)
 {
-	
-	
-	return userAnswer;
+	int length = strlen(userPassword);
+	if (length < 8) return false;
+
+	bool containUpper = false;
+	bool containLower = false;
+	bool containDigit = false;
+	bool containSymbol = false;
+
+	for (int i = 0; i < length; i++)
+	{
+		if (isupper(userPassword[i])) containUpper = true;
+		if (islower(userPassword[i])) containLower = true;
+		if (isdigit(userPassword[i])) containDigit = true;
+		if (ispunct(userPassword[i])) containSymbol = true;
+	}
+
+	if (!containUpper) return false;
+	if (!containLower) return false;
+	if (!containDigit) return false;
+	if (!containSymbol) return false;
+
+	return true;
 }
