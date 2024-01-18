@@ -11,6 +11,8 @@ int main()
 	bool result = PasswordCheck(userPassword);
 
 	// prompting the user with some info about the program.
+	// Before you input your own password, keep in mind:
+	/* The password most contain at least 8 characters, 1 digit, 1 lowercase character, 1 uppercase character, and 1 symbol*/
 
 	printf("\n PasswordCheck by Gustavo Yepez.");
 	printf("\n Hello there and welcome to my program that checks if a password is good enough to pass.\n");
