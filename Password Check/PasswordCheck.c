@@ -9,17 +9,14 @@ int main()
 {
 	char userPassword[] = "ABCD!12ght";
 	bool result = PasswordCheck(userPassword);
-	if (result) printf("Verified");
-	else printf("Invalid");
 
-	// prompting the user with some info about the program and asking about to insert a password of their choice.
+	// prompting the user with some info about the program.
 
 	printf("\n PasswordCheck by Gustavo Yepez.");
-	printf("\n Hello there and welcome to my program that checks if a password is good enough to pass.");
-	printf("\n Please insert your password down below:\n ");
+	printf("\n Hello there and welcome to my program that checks if a password is good enough to pass.\n");
 
-	// assigning the user password into the variable userPassword.
-
+	if (result) printf("\n Verified");
+	else printf("\n Invalid");
 
 	return 0;
 }
