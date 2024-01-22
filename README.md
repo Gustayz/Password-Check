@@ -3,6 +3,10 @@
 Password Check is a program that checks and decide if a password is approved or not, the password needs to have a serial of
 requirements to be approved.
 
+## Languages and tools
+
+Visual Studio 2022 | C
+
 ## How it works
 
 After you've have copy and pasted the code in your IDE, run the program to begin. The program will prompt you with some basic information about the program, then it would decide if the password is Verified or Invalid, change the password as you like in the code, this program will have a second part were a user can input a password while the program is running.
